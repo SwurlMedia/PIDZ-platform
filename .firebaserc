@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "pidz-platform"
+  },
+  "targets": {
+    "swurl-media-74b85": {
+      "hosting": {
+        "development": [
+          "dev-pidz"
+        ],
+        "production": [
+          "pidz-platform"
+        ]
+      }
+    }
   }
 }
