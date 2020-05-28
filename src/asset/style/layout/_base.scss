@@ -4,6 +4,8 @@
   --color-red-secondary: #f9574e;
   --color-orange-tertiary: #f6842b;
   --color-blue-light: #e6edf5;
+  --color-text-primary: #40404f;
+  --color-white: #fff;
   //Spacing rules
   --spacing-xxs: 0.5rem;
   --spacing-xs: 1rem;
@@ -13,10 +15,12 @@
   --spacing-xl: 10rem;
   --spacing-xxl: 14rem;
   //Fonts
-  --font-heading: lato, sans-serif;
+  --font-primary: lato, sans-serif;
 }
 
+//Set html rules
 html {
+  font-size: 8px;
   box-sizing: border-box;
 }
 
@@ -28,14 +32,66 @@ html {
   box-sizing: inherit;
 }
 
+//Set body rules
+body {
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+//Set selection colors
+::selection {
+  background: var(--color-blue-primary);
+  color: var(--color-white);
+  -webkit-text-stroke: initial;
+}
+
+//Set Heading font sizes & colors
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+  color: var(--color-blue-primary);
+  font-family: var(--font-primary);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 8.5rem;
+  line-height: 9rem;
+}
+
+h2 {
+  font-size: 7.5rem;
+  line-height: 8rem;
+}
+
+h3 {
+  font-size: 6rem;
+}
+
+h4 {
+  font-size: 4.5rem;
+  line-height: 5rem;
+}
+
+h5 {
+  font-size: 3rem;
+}
+
+h6 {
+  font-size: 2.25rem;
+  line-height: 3rem;
+}
+
 p {
-  font-family: var(--font-heading);
+  font-family: var(--font-primary);
+  color: var(--color-text-primary);
+  font-weight: 400;
+  font-size: 2.25rem;
   margin: 0;
 }
 
