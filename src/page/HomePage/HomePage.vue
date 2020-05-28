@@ -3,6 +3,12 @@
 
 <template>
   <div :class="[$style.homePage]">
-    <h2>HomePage</h2>
+    <h1>XXL Heading</h1>
+    <h2>XL Heading</h2>
+    <h3>L Heading</h3>
+    <h4>M Heading</h4>
+    <h5>S Heading</h5>
+    <h6>XXS Heading</h6>
+    <p>Maecenas faucibus mollis interdum. Donec sed odio dui. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
   </div>
 </template>
