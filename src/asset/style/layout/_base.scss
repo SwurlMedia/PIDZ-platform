@@ -4,7 +4,7 @@
   --color-red-secondary: #f9574e;
   --color-orange-tertiary: #f6842b;
   --color-blue-light: #e6edf5;
-  //Spacing
+  //Spacing rules
   --spacing-xxs: 0.5rem;
   --spacing-xs: 1rem;
   --spacing-s: 2rem;
@@ -12,6 +12,8 @@
   --spacing-l: 7rem;
   --spacing-xl: 10rem;
   --spacing-xxl: 14rem;
+  //Fonts
+  --font-heading: lato, sans-serif;
 }
 
 html {
@@ -33,7 +35,7 @@ h4,
 h5,
 h6,
 p {
-  font-weight: normal;
+  font-family: var(--font-heading);
   margin: 0;
 }
 
