@@ -1,0 +1,48 @@
+/* stylelint-disable-next-line block-no-empty */
+.text-field {
+  display: block;
+  font-size: 2rem;
+  margin: var(--spacing-s) 0;
+
+  .copy {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: var(--color-blue-primary);
+  }
+
+  .input-wrapper {
+    border: 2px solid var(--color-blue-primary);
+    border-radius: 0.5rem;
+    width: 100%;
+    margin-top: var(--spacing-xxs);
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      padding: 1.5rem 1rem;
+      border: none;
+      color: var(--color-blue-primary);
+      font-weight: bold;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        font-weight: bold;
+        color: #7592b3;
+      }
+    }
+
+    button {
+      background: var(--color-blue-primary);
+      padding: 0 1.5rem;
+      text-transform: uppercase;
+      color: var(--color-blue-light);
+      letter-spacing: 2px;
+      border-radius: 0;
+      cursor: pointer;
+    }
+  }
+}

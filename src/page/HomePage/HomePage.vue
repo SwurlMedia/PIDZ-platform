@@ -13,5 +13,19 @@
     <BtnPrimaryFlat>Button Primary</BtnPrimaryFlat>
     <BtnSecondaryFlat>Button Secondary</BtnSecondaryFlat>
     <BtnLightFlat>Button Light</BtnLightFlat>
+    <TextField
+      label="Label"
+      placeholder="Placeholder"
+    />
+    <TextField
+      label="Password"
+      placeholder="Placeholder"
+      type="password"
+    />
+    <TextField
+      label="Textfield met CTA"
+      placeholder="Placeholder"
+      cta-copy="Versturen"
+    />
   </div>
 </template>
