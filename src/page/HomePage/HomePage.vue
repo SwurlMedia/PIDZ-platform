@@ -12,5 +12,6 @@
     <p>Maecenas faucibus mollis interdum. Donec sed odio dui. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <BtnPrimaryFlat />
     <BtnSecondaryFlat />
+    <BtnLightFlat />
   </div>
 </template>

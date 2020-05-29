@@ -2,6 +2,7 @@ import { AbstractPageScrollComponent, getEventBus, ADD_COMPONENTS } from 'vue-tr
 import HomePageTransitionController from './HomePageTransitionController';
 import BtnPrimaryFlat from '../../component/atom/BtnPrimaryFlat';
 import BtnSecondaryFlat from '../../component/atom/BtnSecondaryFlat';
+import BtnLightFlat from '../../component/atom/BtnLightFlat';
 
 // @vue/component
 export default {
@@ -9,6 +10,7 @@ export default {
   components: {
     BtnPrimaryFlat,
     BtnSecondaryFlat,
+    BtnLightFlat,
   },
   extends: AbstractPageScrollComponent,
   methods: {
