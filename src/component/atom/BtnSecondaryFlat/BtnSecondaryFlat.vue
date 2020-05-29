@@ -2,7 +2,18 @@
 <script src="./BtnSecondaryFlat.js"></script>
 
 <template>
-  <div :class="[$style.btnSecondaryFlat]">
-    <a href="#">Button Secondary</a>
-  </div>
+  <router-link
+    v-if="to"
+    :class="[$style.btnSecondaryFlat]"
+    :to="to"
+  >
+    <slot />
+  </router-link>
+  <button
+    v-else
+    :type="type"
+    :class="[$style.btnSecondaryFlat]"
+  >
+    <slot />
+  </button>
 </template>

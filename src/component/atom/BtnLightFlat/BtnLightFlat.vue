@@ -2,7 +2,18 @@
 <script src="./BtnLightFlat.js"></script>
 
 <template>
-  <div :class="[$style.btnLightFlat]">
-    <a href="#">Button Light Flat</a>
-  </div>
+  <router-link
+    v-if="to"
+    :class="[$style.btnLightFlat]"
+    :to="to"
+  >
+    <slot />
+  </router-link>
+  <button
+    v-else
+    :type="type"
+    :class="[$style.btnLightFlat]"
+  >
+    <slot />
+  </button>
 </template>

@@ -5,6 +5,16 @@ import BtnLightFlatTransitionController from './BtnLightFlatTransitionController
 export default {
   name: 'BtnLightFlat',
   extends: AbstractTransitionComponent,
+  props: {
+    to: {
+      type: Object,
+      default: null,
+    },
+    type: {
+      type: String,
+      default: 'submit',
+    },
+  },
   methods: {
     handleAllComponentsReady() {
       this.transitionController = new BtnLightFlatTransitionController(this);
