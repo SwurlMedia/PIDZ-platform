@@ -18,11 +18,18 @@ export default {
       type: String,
       default: 'text',
     },
+    ctaCopy: {
+      type: String,
+      default: null,
+    },
   },
   methods: {
     handleAllComponentsReady() {
       this.transitionController = new TextFieldTransitionController(this);
       this.isReady();
+    },
+    handleCTAClick() {
+      this.$emit('submit');
     },
   },
 };
