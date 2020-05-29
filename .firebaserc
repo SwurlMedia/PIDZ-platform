@@ -3,7 +3,7 @@
     "default": "pidz-platform"
   },
   "targets": {
-    "swurl-media-74b85": {
+    "pidz-platform": {
       "hosting": {
         "development": [
           "dev-pidz"
