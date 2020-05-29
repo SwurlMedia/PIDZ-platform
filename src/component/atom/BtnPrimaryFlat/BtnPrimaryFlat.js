@@ -5,6 +5,16 @@ import BtnPrimaryFlatTransitionController from './BtnPrimaryFlatTransitionContro
 export default {
   name: 'BtnPrimaryFlat',
   extends: AbstractTransitionComponent,
+  props: {
+    to: {
+      type: Object,
+      default: null,
+    },
+    type: {
+      type: String,
+      default: 'submit',
+    },
+  },
   methods: {
     handleAllComponentsReady() {
       this.transitionController = new BtnPrimaryFlatTransitionController(this);

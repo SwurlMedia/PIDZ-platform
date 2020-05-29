@@ -2,7 +2,18 @@
 <script src="./BtnPrimaryFlat.js"></script>
 
 <template>
-  <div :class="[$style.btnPrimaryFlat]">
-    <a href="#">Button Primary</a>
-  </div>
+  <router-link
+    v-if="to"
+    :class="[$style.btnPrimaryFlat]"
+    :to="to"
+  >
+    <slot />
+  </router-link>
+  <button
+    v-else
+    :type="type"
+    :class="[$style.btnPrimaryFlat]"
+  >
+    <slot />
+  </button>
 </template>
