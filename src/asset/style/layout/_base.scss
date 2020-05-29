@@ -57,6 +57,7 @@ h6 {
   color: var(--color-blue-primary);
   font-family: var(--font-primary);
   font-weight: 700;
+  margin: 0.5em 0;
 }
 
 h1 {
@@ -104,10 +105,16 @@ button {
   border: none;
   text-transform: uppercase;
   letter-spacing: 0.75rem;
-  padding: 2rem;
+  padding: 1.5rem 2.5rem;
+  cursor: pointer;
   border-radius: 1rem;
   font-size: 2rem;
   font-weight: 700;
+  transition: opacity 0.2s ease-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 ul,
@@ -118,4 +125,35 @@ ol {
 
 img {
   display: block;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 2rem repeat(4, 1fr) 2rem;
+  grid-column-gap: 2rem;
+  width: 100%;
+
+  > * {
+    grid-column: 2 / span 4;
+  }
+
+  @include respond-to(MEDIUM) {
+    grid-template-columns: 2rem repeat(12, 1fr) 2rem;
+
+    > * {
+      grid-column: 2 / span 12;
+    }
+  }
+
+  @include respond-to(LARGE) {
+    grid-template-columns: 1fr repeat(24, 4rem) 1fr;
+
+    > * {
+      grid-column: 2 / span 24;
+    }
+  }
+
+  @include respond-to(XLARGE) {
+    grid-template-columns: 1fr repeat(24, 5rem) 1fr;
+  }
 }
