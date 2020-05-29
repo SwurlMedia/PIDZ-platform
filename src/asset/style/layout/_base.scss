@@ -95,6 +95,21 @@ p {
   margin: 0;
 }
 
+a {
+  font-family: var(--font-primary);
+  font-weight: 700;
+}
+
+button {
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.75rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
 ul,
 ol {
   margin: 0;

@@ -1,9 +1,17 @@
 import { AbstractPageScrollComponent, getEventBus, ADD_COMPONENTS } from 'vue-transition-component';
 import HomePageTransitionController from './HomePageTransitionController';
+import BtnPrimaryFlat from '../../component/atom/BtnPrimaryFlat';
+import BtnSecondaryFlat from '../../component/atom/BtnSecondaryFlat';
+import BtnLightFlat from '../../component/atom/BtnLightFlat';
 
 // @vue/component
 export default {
   name: 'HomePage',
+  components: {
+    BtnPrimaryFlat,
+    BtnSecondaryFlat,
+    BtnLightFlat,
+  },
   extends: AbstractPageScrollComponent,
   methods: {
     handleAllComponentsReady() {
