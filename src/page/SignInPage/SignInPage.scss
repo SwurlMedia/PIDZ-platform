@@ -42,4 +42,19 @@
       grid-column: 1 / 15;
     }
   }
+
+  @include respond-to(LARGE) {
+    display: flex;
+
+    main {
+      padding: 0 5rem;
+      min-width: 61rem;
+      box-shadow: 0 2rem 3rem rgba(black, 0.15), 0 0 3rem rgba(black, 0.15);
+    }
+
+    aside {
+      height: 100vh;
+      width: 100%;
+    }
+  }
 }
