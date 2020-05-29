@@ -36,4 +36,10 @@
     grid-column: 1 / 7;
     grid-row: 1;
   }
+
+  @include respond-to(MEDIUM) {
+    aside {
+      grid-column: 1 / 15;
+    }
+  }
 }
