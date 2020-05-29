@@ -9,8 +9,8 @@
     <main>
       <Icon :class="$style.logo" name="wijPidz"/>
       <form>
-        <TextField label="Email" placeholder="Email"/>
-        <TextField label="Wachtwoord" placeholder="Wachtwoord" type="password"/>
+        <TextField v-model="email" label="Email" placeholder="Email"/>
+        <TextField v-model="password" label="Wachtwoord" placeholder="Wachtwoord" type="password"/>
         <BtnPrimaryFlat>Inloggen</BtnPrimaryFlat>
         <a href="#">Wachtwoord vergeten</a>
         <a href="#">Account aanvragen</a>

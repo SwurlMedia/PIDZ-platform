@@ -9,6 +9,12 @@ export default {
     BtnPrimaryFlat,
   },
   extends: AbstractPageScrollComponent,
+  data() {
+    return {
+      email: '',
+      password: '',
+    };
+  },
   methods: {
     handleAllComponentsReady() {
       this.transitionController = new SignInPageTransitionController(this);
