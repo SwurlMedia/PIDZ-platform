@@ -2,7 +2,7 @@ import {
   AbstractTransitionController,
   IAbstractTransitionComponent,
 } from 'vue-transition-component';
-import { TimelineMax } from 'gsap';
+import { TimelineMax, Expo } from 'gsap';
 
 export default class SignInPageTransitionController extends AbstractTransitionController {
   /**
@@ -18,7 +18,23 @@ export default class SignInPageTransitionController extends AbstractTransitionCo
     timeline: TimelineMax,
     parent: IAbstractTransitionComponent,
     id: string,
-  ): void {}
+  ): void {
+    timeline
+      .from(parent.$el, 0.5, {
+        opacity: 0,
+      })
+      .staggerFrom(
+        parent.$el.querySelectorAll('.stagger'),
+        1,
+        {
+          opacity: 0,
+          y: 50,
+          ease: Expo.easeOut,
+        },
+        0.1,
+        '=-0.5',
+      );
+  }
 
   /**
    * Use this method to setup your transition out timeline

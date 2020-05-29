@@ -24,5 +24,8 @@ export default {
 
       this.isReady();
     },
+    signIn() {
+      alert(`email: ${this.email} – password: ${this.password}`);
+    },
   },
 };

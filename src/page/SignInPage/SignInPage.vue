@@ -6,16 +6,16 @@
     :class="[$style.signInPage]"
     class="grid-container"
   >
-    <main>
-      <Icon :class="$style.logo" name="wijPidz"/>
-      <form>
-        <TextField v-model="email" label="Email" placeholder="Email"/>
-        <TextField v-model="password" label="Wachtwoord" placeholder="Wachtwoord" type="password"/>
-        <BtnPrimaryFlat>Inloggen</BtnPrimaryFlat>
-        <a href="#">Wachtwoord vergeten</a>
-        <a href="#">Account aanvragen</a>
+    <main ref="main">
+      <Icon class="stagger" :class="$style.logo" name="wijPidz"/>
+      <form @submit.prevent="signIn">
+        <TextField class="stagger" v-model="email" label="Email" placeholder="Email"/>
+        <TextField class="stagger" v-model="password" label="Wachtwoord" placeholder="Wachtwoord" type="password"/>
+        <BtnPrimaryFlat class="stagger">Inloggen</BtnPrimaryFlat>
+        <a class="stagger" href="#">Wachtwoord vergeten</a>
+        <a class="stagger" href="#">Account aanvragen</a>
       </form>
     </main>
-    <aside />
+    <aside ref="aside" />
   </div>
 </template>
