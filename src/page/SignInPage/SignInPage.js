@@ -1,7 +1,8 @@
 import { AbstractPageScrollComponent, getEventBus, ADD_COMPONENTS } from 'vue-transition-component';
+import { mapActions, mapState } from 'vuex';
 import SignInPageTransitionController from './SignInPageTransitionController';
 import BtnPrimaryFlat from '../../component/atom/BtnPrimaryFlat';
-import User from '../../data/User';
+import { SIGN_IN } from '../../store/module/user/user';
 
 // @vue/component
 export default {
@@ -16,6 +17,11 @@ export default {
       password: '',
     };
   },
+  computed: {
+    ...mapState({
+      user: state => state.user.user,
+    }),
+  },
   methods: {
     handleAllComponentsReady() {
       this.transitionController = new SignInPageTransitionController(this);
@@ -24,15 +30,21 @@ export default {
       getEventBus().$emit(ADD_COMPONENTS, this.scrollComponents);
 
       this.isReady();
-
-      User.fetchUserDetails('zepRTOPcbh4iLhL5wGIT')
-        .then(user => {
-          console.log(user);
+    },
+    handleSignIn() {
+      this.signIn({
+        email: this.email,
+        password: this.password,
+      })
+        .then(() => {
+          // TODO: implement route change
+          console.log(this.user);
         })
+        // TODO: implement proper error handling
         .catch(err => console.error(err));
     },
-    signIn() {
-      alert(`email: ${this.email} – password: ${this.password}`);
-    },
+    ...mapActions({
+      signIn: SIGN_IN,
+    }),
   },
 };

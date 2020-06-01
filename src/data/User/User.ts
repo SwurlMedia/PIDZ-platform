@@ -1,6 +1,7 @@
 import IUser, { IOccupation, IUserData, IUserGeneral } from './IUser';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
+import 'firebase/auth';
 
 export default class User implements IUser {
   private _general: IUserGeneral;
@@ -41,23 +42,28 @@ export default class User implements IUser {
     return this;
   }
 
-  public async createAsNewUser(details: IUser): Promise<User> {
+  public async createAsNewUser(): Promise<User> {
     const currentUserDoc = await firebase
       .firestore()
-      .doc(`users/${details.general.uid}`)
+      .doc(`users/${this.general.uid}`)
       .get();
 
     if (currentUserDoc.exists) {
       throw new Error('user with this ID already exists');
     }
 
+    const details = {
+      general: this.general,
+      occupation: this.occupation,
+    };
+
     await firebase
       .firestore()
-      .doc(`users/${details.general.uid}`)
+      .doc(`users/${this.general.uid}`)
       .set(details);
 
-    this._general = details.general;
-    this._occupation = details.occupation;
+    this._general = this.general;
+    this._occupation = this.occupation;
 
     return this;
   }
@@ -85,5 +91,34 @@ export default class User implements IUser {
     } as IUser;
 
     return new User(user);
+  }
+
+  public static async signIn(email: string, password: string): Promise<User> {
+    await firebase.auth().signInWithEmailAndPassword(email, password);
+
+    const userCred = firebase.auth().currentUser;
+
+    if (!userCred) {
+      throw new Error('user is not defined');
+    }
+
+    const { uid } = userCred;
+
+    const userDetails = await User.fetchUserDetails(uid);
+
+    return new User(userDetails);
+  }
+
+  public static async signOut(): Promise<void> {
+    return firebase.auth().signOut();
+  }
+
+  public static async signUp(userDetails: IUser, password: string): Promise<User> {
+    await firebase.auth().createUserWithEmailAndPassword(userDetails.general.email, password);
+
+    const user = new User(userDetails);
+    await user.createAsNewUser();
+
+    return user;
   }
 }

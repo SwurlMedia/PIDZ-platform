@@ -16,8 +16,8 @@ interface IUserGeneral {
 
 interface IOccupation {
   educationLevel: EEducationLevel;
-  study: string;
-  speciality: string;
+  study?: string;
+  speciality?: string;
 }
 
 enum EEducationLevel {
