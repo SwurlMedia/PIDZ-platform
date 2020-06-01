@@ -1,6 +1,7 @@
 import { AbstractPageScrollComponent, getEventBus, ADD_COMPONENTS } from 'vue-transition-component';
 import SignInPageTransitionController from './SignInPageTransitionController';
 import BtnPrimaryFlat from '../../component/atom/BtnPrimaryFlat';
+import User from '../../data/User';
 
 // @vue/component
 export default {
@@ -23,6 +24,12 @@ export default {
       getEventBus().$emit(ADD_COMPONENTS, this.scrollComponents);
 
       this.isReady();
+
+      User.fetchUserDetails('zepRTOPcbh4iLhL5wGIT')
+        .then(user => {
+          console.log(user);
+        })
+        .catch(err => console.error(err));
     },
     signIn() {
       alert(`email: ${this.email} – password: ${this.password}`);
