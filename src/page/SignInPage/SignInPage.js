@@ -37,8 +37,7 @@ export default {
         password: this.password,
       })
         .then(() => {
-          // TODO: implement route change
-          console.log(this.user);
+          this.$route.push({ name: this.RouteNames.HOME });
         })
         // TODO: implement proper error handling
         .catch(err => console.error(err));
