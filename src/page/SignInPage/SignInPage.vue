@@ -12,7 +12,7 @@
         :class="$style.logo"
         name="wijPidz"
       />
-      <form @submit.prevent="signIn">
+      <form @submit.prevent="handleSignIn">
         <TextField
           v-model="email"
           class="stagger"
