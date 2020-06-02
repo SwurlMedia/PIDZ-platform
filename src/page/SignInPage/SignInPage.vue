@@ -33,10 +33,12 @@
           class="stagger"
           href="#"
         >Wachtwoord vergeten</a>
-        <a
+        <router-link
           class="stagger"
-          href="#"
-        >Account aanvragen</a>
+          :to="{ name: RouteNames.REGISTRATION }"
+        >
+          Account aanvragen
+        </router-link>
       </form>
     </main>
     <aside ref="aside" />

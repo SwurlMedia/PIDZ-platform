@@ -2,9 +2,9 @@ import {
   AbstractTransitionController,
   IAbstractTransitionComponent,
 } from 'vue-transition-component';
-import { TimelineMax, Expo } from 'gsap';
+import { TimelineMax } from 'gsap';
 
-export default class SignInPageTransitionController extends AbstractTransitionController {
+export default class RegistrationPageTransitionController extends AbstractTransitionController {
   /**
    * Use this method to setup your transition in timeline
    *
@@ -18,23 +18,7 @@ export default class SignInPageTransitionController extends AbstractTransitionCo
     timeline: TimelineMax,
     parent: IAbstractTransitionComponent,
     id: string,
-  ): void {
-    timeline
-      .from(parent.$el, 0.5, {
-        autoAlpha: 0,
-      })
-      .staggerFrom(
-        parent.$el.querySelectorAll('.stagger'),
-        1,
-        {
-          autoAlpha: 0,
-          y: 50,
-          ease: Expo.easeOut,
-        },
-        0.1,
-        '=-0.5',
-      );
-  }
+  ): void {}
 
   /**
    * Use this method to setup your transition out timeline
@@ -49,12 +33,7 @@ export default class SignInPageTransitionController extends AbstractTransitionCo
     timeline: TimelineMax,
     parent: IAbstractTransitionComponent,
     id: string,
-  ): void {
-    timeline.to(parent.$el, 1, {
-      autoAlpha: 0,
-      ease: Expo.easeOut,
-    });
-  }
+  ): void {}
 
   /**
    * Use this method to setup your looping timeline
