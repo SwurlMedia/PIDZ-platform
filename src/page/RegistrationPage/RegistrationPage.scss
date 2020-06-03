@@ -25,6 +25,11 @@
     }
   }
 
+  aside p {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
   @include respond-to(MEDIUM) {
     .form-section {
       .input-wrapper {

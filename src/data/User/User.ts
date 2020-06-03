@@ -62,9 +62,6 @@ export default class User implements IUser {
       .doc(`users/${this.general.uid}`)
       .set(details);
 
-    this._general = this.general;
-    this._occupation = this.occupation;
-
     return this;
   }
 
@@ -115,8 +112,19 @@ export default class User implements IUser {
 
   public static async signUp(userDetails: IUser, password: string): Promise<User> {
     await firebase.auth().createUserWithEmailAndPassword(userDetails.general.email, password);
+    const currentUser = await firebase.auth().currentUser;
 
-    const user = new User(userDetails);
+    if (!currentUser) {
+      throw new Error('user is not defined');
+    }
+
+    const user = new User({
+      general: {
+        ...userDetails.general,
+        uid: currentUser.uid,
+      },
+      occupation: userDetails.occupation,
+    });
     await user.createAsNewUser();
 
     return user;

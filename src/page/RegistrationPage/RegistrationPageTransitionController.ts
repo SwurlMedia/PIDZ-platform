@@ -19,7 +19,7 @@ export default class RegistrationPageTransitionController extends AbstractTransi
     parent: IAbstractTransitionComponent,
     id: string,
   ): void {
-    const el = parent.$el.querySelectorAll('aside h5, main label, button, a, img');
+    const el = parent.$el.querySelectorAll('aside h5, main label, button, a, img, p');
 
     timeline
       .from(parent.$el, 1, {

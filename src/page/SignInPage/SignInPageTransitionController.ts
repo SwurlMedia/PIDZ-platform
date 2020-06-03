@@ -22,6 +22,7 @@ export default class SignInPageTransitionController extends AbstractTransitionCo
     timeline
       .from(parent.$el, 0.5, {
         autoAlpha: 0,
+        clearProps: 'all',
       })
       .staggerFrom(
         parent.$el.querySelectorAll('.stagger'),
@@ -30,6 +31,7 @@ export default class SignInPageTransitionController extends AbstractTransitionCo
           autoAlpha: 0,
           y: 50,
           ease: Expo.easeOut,
+          clearProps: 'all',
         },
         0.1,
         '=-0.5',

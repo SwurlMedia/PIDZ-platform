@@ -26,18 +26,18 @@
       for="uploadImg"
     >
       <btn-light-flat
+        v-if="uploadedImage"
         :class="$style.btn"
         type="button"
-        v-if="uploadedImage"
       >
         upload een andere foto
       </btn-light-flat>
       <btn-light-flat
-        :class="$style.btn"
         v-else
+        :class="$style.btn"
         type="button"
       >
-        upload een foto
+        profielfoto uploaden
       </btn-light-flat>
       <input
         id="uploadImg"
