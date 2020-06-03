@@ -18,6 +18,7 @@ interface IOccupation {
   educationLevel: EEducationLevel;
   study?: string;
   speciality?: string;
+  yearsExperience?: number;
 }
 
 enum EEducationLevel {

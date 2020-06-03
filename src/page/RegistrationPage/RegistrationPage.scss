@@ -1,3 +1,54 @@
 /* stylelint-disable-next-line block-no-empty */
 .registration-page {
+  padding-bottom: 10rem;
+
+  .form-section {
+    padding-bottom: 7rem;
+    margin-bottom: 9rem;
+    border-bottom: 2px solid var(--color-blue-light);
+
+    &:nth-child(1) {
+      margin-top: 10rem;
+    }
+  }
+
+  .btn {
+    margin-bottom: 1rem;
+  }
+
+  @include respond-to(MEDIUM) {
+    .form-section {
+      .input-wrapper {
+        display: flex;
+
+        > * {
+          flex-basis: 100%;
+
+          &:not(:last-child) {
+            margin-right: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include respond-to(LARGE) {
+    aside {
+      grid-column: 2 / 10;
+    }
+
+    main {
+      grid-column: 10 / 26;
+    }
+
+    .btn-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      grid-column: 13 / 26;
+
+      .btn-secondary {
+        margin-right: 2rem;
+      }
+    }
+  }
 }

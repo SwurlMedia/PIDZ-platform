@@ -24,6 +24,7 @@ export default {
         educationLevel: 'other',
         study: undefined,
         speciality: undefined,
+        yearsExperience: 0,
       },
     },
   },
