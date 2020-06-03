@@ -5,6 +5,7 @@
   <div
     :class="[$style.registrationPage]"
   >
+    <!-- TODO: insert hero -->
     <form>
       <section
         :class="$style.formSection"
@@ -85,21 +86,24 @@
           <div :class="$style.inputWrapper">
             <TextField
               label="Wachtwoord"
-              placeholder="ouderenzorg"
+              placeholder="Voer een veilig wachtwoord in"
             />
           </div>
           <div :class="$style.inputWrapper">
             <TextField
               label="Wachtwoord herhalen"
               type="password"
-              placeholder="10 jaar"
+              placeholder="Herhaal uw wachtwoord"
             />
           </div>
         </main>
       </section>
       <section class="grid-container">
         <div :class="$style.btnWrapper">
-          <BtnLightFlat :class="[$style.btnSecondary, $style.btn]">
+          <BtnLightFlat
+            :class="[$style.btnSecondary, $style.btn]"
+            :to="{name: RouteNames.SIGN_IN}"
+          >
             Ik heb al een account
           </BtnLightFlat>
           <BtnPrimaryFlat :class="[$style.btnPrimary, $style.btn]">

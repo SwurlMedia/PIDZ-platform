@@ -13,15 +13,39 @@
       src="../../../asset/svg/profileImgPlaceholder.svg"
       alt="user-image"
     >
-    <label for="uploadImg">
-      <btn-light-flat :class="$style.btn" type="button">
+    <btn-light-flat
+      v-if="loading"
+      :class="$style.btn"
+      type="button"
+      disabled
+    >
+      even geduld a.u.b...
+    </btn-light-flat>
+    <label
+      v-else
+      for="uploadImg"
+    >
+      <btn-light-flat
+        :class="$style.btn"
+        type="button"
+        v-if="uploadedImage"
+      >
+        upload een andere foto
+      </btn-light-flat>
+      <btn-light-flat
+        :class="$style.btn"
+        v-else
+        type="button"
+      >
         upload een foto
       </btn-light-flat>
       <input
         id="uploadImg"
+        ref="file"
         name="uploadImg"
         type="file"
         accept="image/*"
+        @change="upload"
       >
     </label>
   </div>

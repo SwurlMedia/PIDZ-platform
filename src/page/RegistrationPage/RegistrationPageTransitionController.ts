@@ -2,7 +2,7 @@ import {
   AbstractTransitionController,
   IAbstractTransitionComponent,
 } from 'vue-transition-component';
-import { TimelineMax } from 'gsap';
+import { TimelineMax, Expo } from 'gsap';
 
 export default class RegistrationPageTransitionController extends AbstractTransitionController {
   /**
@@ -18,7 +18,27 @@ export default class RegistrationPageTransitionController extends AbstractTransi
     timeline: TimelineMax,
     parent: IAbstractTransitionComponent,
     id: string,
-  ): void {}
+  ): void {
+    const el = parent.$el.querySelectorAll('aside h5, main label, button, a, img');
+
+    timeline
+      .from(parent.$el, 1, {
+        autoAlpha: 0,
+        ease: Expo.easeOut,
+      })
+      .staggerFrom(
+        el,
+        1,
+        {
+          y: 50,
+          autoAlpha: 0,
+          ease: Expo.easeOut,
+          clearProps: 'all',
+        },
+        0.05,
+        '=-0.5',
+      );
+  }
 
   /**
    * Use this method to setup your transition out timeline
@@ -33,7 +53,12 @@ export default class RegistrationPageTransitionController extends AbstractTransi
     timeline: TimelineMax,
     parent: IAbstractTransitionComponent,
     id: string,
-  ): void {}
+  ): void {
+    timeline.to(parent.$el, 1, {
+      autoAlpha: 0,
+      ease: Expo.easeOut,
+    });
+  }
 
   /**
    * Use this method to setup your looping timeline

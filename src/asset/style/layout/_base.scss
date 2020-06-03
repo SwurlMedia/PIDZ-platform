@@ -101,10 +101,11 @@ a {
   font-weight: 700;
 }
 
-button {
+.btn {
   border: none;
   text-transform: uppercase;
   letter-spacing: 0.75rem;
+  text-decoration: none;
   padding: 1.5rem 2.5rem;
   cursor: pointer;
   border-radius: 1rem;
@@ -114,6 +115,15 @@ button {
 
   &:hover {
     opacity: 0.8;
+  }
+
+  &:disabled {
+    filter: saturate(0);
+    cursor: not-allowed;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
@@ -146,7 +156,7 @@ img {
   }
 
   @include respond-to(LARGE) {
-    grid-template-columns: 1fr repeat(24, 4rem) 1fr;
+    grid-template-columns: 1fr repeat(24, 3rem) 1fr;
 
     > * {
       grid-column: 2 / span 24;

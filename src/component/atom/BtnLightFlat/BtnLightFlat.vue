@@ -5,6 +5,7 @@
   <router-link
     v-if="to"
     :class="[$style.btnLightFlat]"
+    class="btn"
     :to="to"
   >
     <slot />
@@ -13,6 +14,7 @@
     v-else
     :type="type"
     :class="[$style.btnLightFlat]"
+    class="btn"
   >
     <slot />
   </button>

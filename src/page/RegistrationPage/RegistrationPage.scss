@@ -16,6 +16,15 @@
     margin-bottom: 1rem;
   }
 
+  .btn-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .btn {
+      flex-basis: 100%;
+    }
+  }
+
   @include respond-to(MEDIUM) {
     .form-section {
       .input-wrapper {
@@ -30,6 +39,14 @@
         }
       }
     }
+
+    .btn-wrapper {
+      flex-wrap: nowrap;
+
+      .btn-secondary {
+        margin-right: 2rem;
+      }
+    }
   }
 
   @include respond-to(LARGE) {
@@ -42,12 +59,11 @@
     }
 
     .btn-wrapper {
-      display: flex;
       justify-content: flex-end;
-      grid-column: 13 / 26;
+      grid-column: 2 / 26;
 
-      .btn-secondary {
-        margin-right: 2rem;
+      .btn {
+        flex-basis: initial;
       }
     }
   }

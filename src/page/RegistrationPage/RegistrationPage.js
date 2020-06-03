@@ -22,5 +22,8 @@ export default {
 
       this.isReady();
     },
+    handleProfileImgUploaded(url) {
+      console.log(url);
+    },
   },
 };
