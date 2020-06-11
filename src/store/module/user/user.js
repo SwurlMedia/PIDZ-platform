@@ -11,42 +11,40 @@ export const SIGN_UP = `${namespace}/signUp`;
 
 export default {
   state: {
-    user: {
-      general: {
+    general: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      uid: '',
+      dateOfBirth: new Date(''),
+      profileImgUrl: undefined,
+    },
+    occupation: {
+      educationLevel: 'other',
+      study: undefined,
+      speciality: undefined,
+      yearsExperience: 0,
+    },
+  },
+  getters: {},
+  mutations: {
+    [SET_USER](state, user) {
+      state.general = user.general;
+      state.occupation = user.occupation;
+    },
+    [RESET_USER](state) {
+      state.general = {
         firstName: '',
         lastName: '',
         email: '',
         uid: '',
         dateOfBirth: new Date(''),
         profileImgUrl: undefined,
-      },
-      occupation: {
+      };
+      state.occupation = {
         educationLevel: 'other',
         study: undefined,
         speciality: undefined,
-      },
-    },
-  },
-  getters: {},
-  mutations: {
-    [SET_USER](state, user) {
-      state.user = user;
-    },
-    [RESET_USER](state) {
-      state.user = {
-        general: {
-          firstName: '',
-          lastName: '',
-          email: '',
-          uid: '',
-          dateOfBirth: new Date(''),
-          profileImgUrl: undefined,
-        },
-        occupation: {
-          educationLevel: 'other',
-          study: undefined,
-          speciality: undefined,
-        },
       };
     },
   },
@@ -62,7 +60,7 @@ export default {
       context.commit(RESET_USER);
     },
     async [SIGN_UP](context, payload) {
-      const user = await User.signUp(payload);
+      const user = await User.signUp(payload.details, payload.password);
       context.commit(SET_USER, user);
 
       return user;

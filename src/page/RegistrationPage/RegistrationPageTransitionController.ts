@@ -4,7 +4,7 @@ import {
 } from 'vue-transition-component';
 import { TimelineMax, Expo } from 'gsap';
 
-export default class SignInPageTransitionController extends AbstractTransitionController {
+export default class RegistrationPageTransitionController extends AbstractTransitionController {
   /**
    * Use this method to setup your transition in timeline
    *
@@ -19,21 +19,23 @@ export default class SignInPageTransitionController extends AbstractTransitionCo
     parent: IAbstractTransitionComponent,
     id: string,
   ): void {
+    const el = parent.$el.querySelectorAll('aside h5, main label, button, a, img, p');
+
     timeline
-      .from(parent.$el, 0.5, {
+      .from(parent.$el, 1, {
         autoAlpha: 0,
-        clearProps: 'all',
+        ease: Expo.easeOut,
       })
       .staggerFrom(
-        parent.$el.querySelectorAll('.stagger'),
+        el,
         1,
         {
-          autoAlpha: 0,
           y: 50,
+          autoAlpha: 0,
           ease: Expo.easeOut,
           clearProps: 'all',
         },
-        0.1,
+        0.05,
         '=-0.5',
       );
   }

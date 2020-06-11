@@ -13,6 +13,7 @@
       >
       <button
         v-if="ctaCopy"
+        class="btn"
         type="button"
         @click="handleCTAClick"
       >{{ ctaCopy }}</button>
