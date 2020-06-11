@@ -48,6 +48,7 @@
     "seng-config": "^1.1.0",
     "seng-device-state-tracker": "^1.1.4",
     "seng-scss": "^1.0.0",
+    "vee-validate": "^3.3.2",
     "vue": "^2.6.11",
     "vue-i18n-manager": "^3.2.2",
     "vue-router": "^3.0.1",

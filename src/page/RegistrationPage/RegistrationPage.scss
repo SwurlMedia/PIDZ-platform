@@ -10,6 +10,16 @@
     &:nth-child(1) {
       margin-top: 10rem;
     }
+
+    .error {
+      font-size: 2rem;
+      color: var(--color-red-secondary);
+
+      &:not(:first-of-type)::before {
+        margin: 0 0.5em;
+        content: '–';
+      }
+    }
   }
 
   .btn {

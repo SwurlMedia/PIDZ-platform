@@ -1,10 +1,32 @@
 import { AbstractPageScrollComponent, getEventBus, ADD_COMPONENTS } from 'vue-transition-component';
 import { mapActions } from 'vuex';
+import { ValidationProvider, ValidationObserver, extend } from 'vee-validate';
+import { email, required, confirmed, numeric } from 'vee-validate/dist/rules';
 import RegistrationPageTransitionController from './RegistrationPageTransitionController';
 import BtnPrimaryFlat from '../../component/atom/BtnPrimaryFlat';
 import BtnLightFlat from '../../component/atom/BtnLightFlat';
 import ProfileImgSelector from '../../component/molecule/ProfileImgSelector';
 import { SIGN_UP } from '../../store/module/user/user';
+
+extend('email', {
+  ...email,
+  message: 'Geen geldig email adres',
+});
+
+extend('required', {
+  ...required,
+  message: 'Dit veld is verplicht',
+});
+
+extend('confirmed', {
+  ...confirmed,
+  message: 'Het wachtwoord moet gelijk zijn',
+});
+
+extend('numeric', {
+  ...numeric,
+  message: 'Moet een nummer zijn',
+});
 
 // @vue/component
 export default {
@@ -13,6 +35,8 @@ export default {
     BtnPrimaryFlat,
     BtnLightFlat,
     ProfileImgSelector,
+    ValidationProvider,
+    ValidationObserver,
   },
   extends: AbstractPageScrollComponent,
   data() {
@@ -50,14 +74,6 @@ export default {
     },
     handleSignUp() {
       const { general, occupation, security } = this;
-      console.log({
-        general: {
-          ...general,
-          dateOfBirth: new Date(general.dateOfBirth),
-        },
-        occupation,
-        security,
-      });
 
       this.signUp({
         details: {
@@ -65,7 +81,10 @@ export default {
             ...general,
             dateOfBirth: new Date(general.dateOfBirth),
           },
-          occupation,
+          occupation: {
+            ...occupation,
+            yearsExperience: Number(occupation.yearsExperience),
+          },
         },
         password: security.password,
       })
