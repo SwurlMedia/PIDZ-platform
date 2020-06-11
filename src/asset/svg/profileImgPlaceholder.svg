@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="176px" height="176px" viewBox="0 0 176 176" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>user copy</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="176" height="176"></rect>
+    </defs>
+    <g id="Registration" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy" transform="translate(-680.000000, -1197.000000)">
+            <g id="Group-Copy-2" transform="translate(152.000000, 1138.000000)">
+                <g id="Group-2" transform="translate(528.000000, 59.000000)">
+                    <g id="user-copy">
+                        <g id="u">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Mask" fill="#E6EDF5" xlink:href="#path-1"></use>
+                            <path d="M88,112 C105.675049,112 120,97.6750488 120,80 C120,62.3249512 105.675049,48 88,48 C70.3249512,48 56,62.3249512 56,80 C56,97.6750488 70.3249512,112 88,112 Z M132,176 C138.625,176 144,170.625 144,164 L144,153.600098 C144,135.050049 128.949951,120 110.399902,120 L106.225098,120 C100.675049,122.550049 94.5,124 88,124 C81.5,124 75.3500977,122.550049 69.7749023,120 L65.6000977,120 C47.0500488,120 32,135.050049 32,153.600098 L32,164 C32,170.625 37.375,176 44,176 L132,176 Z" fill="#9BAFC5" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

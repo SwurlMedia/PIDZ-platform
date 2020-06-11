@@ -2,15 +2,15 @@ import {
   AbstractTransitionController,
   IAbstractTransitionComponent,
 } from 'vue-transition-component';
-import { TimelineMax, Expo } from 'gsap';
+import { TimelineMax } from 'gsap';
 
-export default class SignInPageTransitionController extends AbstractTransitionController {
+export default class ProfileImgSelectorTransitionController extends AbstractTransitionController {
   /**
    * Use this method to setup your transition in timeline
    *
    * @protected
    * @method setupTransitionInTimeline
-   * @param {TimelineMax} timeline The transition in timeline
+   * @param {TimelineLite | TimelineMax} timeline The transition in timeline
    * @param {IAbstractTransitionComponent} parent The reference to the parent controller
    * @param {string} id The transition id that was provided when constructing the controller
    */
@@ -18,32 +18,14 @@ export default class SignInPageTransitionController extends AbstractTransitionCo
     timeline: TimelineMax,
     parent: IAbstractTransitionComponent,
     id: string,
-  ): void {
-    timeline
-      .from(parent.$el, 0.5, {
-        autoAlpha: 0,
-        clearProps: 'all',
-      })
-      .staggerFrom(
-        parent.$el.querySelectorAll('.stagger'),
-        1,
-        {
-          autoAlpha: 0,
-          y: 50,
-          ease: Expo.easeOut,
-          clearProps: 'all',
-        },
-        0.1,
-        '=-0.5',
-      );
-  }
+  ): void {}
 
   /**
    * Use this method to setup your transition out timeline
    *
    * @protected
    * @method setupTransitionOutTimeline
-   * @param {TimelineMax} timeline The transition in timeline
+   * @param {TimelineLite | TimelineMax} timeline The transition in timeline
    * @param {IAbstractTransitionComponent} parent The reference to the parent controller
    * @param {string} id The transition id that was provided when constructing the controller
    */
@@ -51,19 +33,14 @@ export default class SignInPageTransitionController extends AbstractTransitionCo
     timeline: TimelineMax,
     parent: IAbstractTransitionComponent,
     id: string,
-  ): void {
-    timeline.to(parent.$el, 1, {
-      autoAlpha: 0,
-      ease: Expo.easeOut,
-    });
-  }
+  ): void {}
 
   /**
    * Use this method to setup your looping timeline
    *
    * @protected
    * @method setupLoopingAnimationTimeline
-   * @param {TimelineMax} timeline The transition in timeline
+   * @param {TimelineLite | TimelineMax} timeline The transition in timeline
    * @param {IAbstractTransitionComponent} parent The reference to the parent controller
    * @param {string} id The transition id that was provided when constructing the controller
    */

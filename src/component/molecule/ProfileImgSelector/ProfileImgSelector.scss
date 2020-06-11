@@ -1,0 +1,33 @@
+/* stylelint-disable-next-line block-no-empty */
+.profile-img-selector {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+  }
+
+  label {
+    pointer-events: all;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    input {
+      display: none;
+    }
+
+    .btn {
+      pointer-events: none;
+    }
+  }
+}
