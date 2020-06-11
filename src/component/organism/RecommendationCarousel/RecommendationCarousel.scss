@@ -1,0 +1,31 @@
+/* stylelint-disable-next-line block-no-empty */
+.recommendation-carousel {
+  main {
+    overflow: hidden;
+  }
+
+  .carousel-wrapper {
+    grid-column: 2 / 7;
+
+    ul {
+      display: flex;
+      list-style: none;
+
+      li {
+        padding-right: 2rem;
+      }
+    }
+  }
+
+  @include respond-to(MEDIUM) {
+    .carousel-wrapper {
+      grid-column: 2 / 15;
+    }
+  }
+
+  @include respond-to(LARGE) {
+    .carousel-wrapper {
+      grid-column: 2 / 27;
+    }
+  }
+}
