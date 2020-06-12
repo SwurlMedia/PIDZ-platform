@@ -1,10 +1,7 @@
-import {
-  AbstractTransitionController,
-  IAbstractTransitionComponent,
-} from 'vue-transition-component';
+import { AbstractTransitionController, IAbstractTransitionComponent } from 'vue-transition-component';
 import gsap from 'gsap';
 
-export default class BtnSecondaryFlatTransitionController extends AbstractTransitionController {
+export default class {{name_pc}}TransitionController extends AbstractTransitionController {
   /**
    * Use this method to setup your transition in timeline
    *
@@ -15,10 +12,9 @@ export default class BtnSecondaryFlatTransitionController extends AbstractTransi
    * @param {string} id The transition id that was provided when constructing the controller
    */
   protected setupTransitionInTimeline(
-    timeline: gsap.core.Timeline,
-    parent: IAbstractTransitionComponent,
-    id: string,
-  ): void {}
+    timeline:gsap.core.Timeline,
+    parent:IAbstractTransitionComponent,
+    id:string): void {}
 
   /**
    * Use this method to setup your transition out timeline
@@ -30,10 +26,9 @@ export default class BtnSecondaryFlatTransitionController extends AbstractTransi
    * @param {string} id The transition id that was provided when constructing the controller
    */
   protected setupTransitionOutTimeline(
-    timeline: gsap.core.Timeline,
-    parent: IAbstractTransitionComponent,
-    id: string,
-  ): void {}
+    timeline:gsap.core.Timeline,
+    parent:IAbstractTransitionComponent,
+    id:string): void {}
 
   /**
    * Use this method to setup your looping timeline
@@ -45,8 +40,7 @@ export default class BtnSecondaryFlatTransitionController extends AbstractTransi
    * @param {string} id The transition id that was provided when constructing the controller
    */
   protected setupLoopingAnimationTimeline(
-    timeline: gsap.core.Timeline,
-    parent: IAbstractTransitionComponent,
-    id: string,
-  ): void {}
+    timeline:gsap.core.Timeline,
+    parent:IAbstractTransitionComponent,
+    id:string): void {}
 }
