@@ -3,10 +3,7 @@
 
 <template>
   <div :class="[$style.articleThumbnail]">
-    <img
-      src="https://via.placeholder.com/360"
-      alt=""
-    >
+    <img src="https://images.unsplash.com/photo-1471899236350-e3016bf1e69e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
     <h5>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</h5>
     <div :class="$style.info">
       <span>Lorem Fringilla</span>

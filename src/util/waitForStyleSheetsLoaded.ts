@@ -19,7 +19,7 @@ const waitForStyleSheetsLoaded = (document: HTMLDocument) =>
       }
     };
 
-    checkAllLoaded(true);
+    checkAllLoaded(false);
 
     if (!allLoaded) {
       links.forEach(stylesheet => {
