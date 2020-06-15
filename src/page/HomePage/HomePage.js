@@ -3,6 +3,7 @@ import HomePageTransitionController from './HomePageTransitionController';
 import BtnPrimaryFlat from '../../component/atom/BtnPrimaryFlat';
 import BtnSecondaryFlat from '../../component/atom/BtnSecondaryFlat';
 import BtnLightFlat from '../../component/atom/BtnLightFlat';
+import Hero from '../../component/organism/Hero';
 
 // @vue/component
 export default {
@@ -11,6 +12,7 @@ export default {
     BtnPrimaryFlat,
     BtnSecondaryFlat,
     BtnLightFlat,
+    Hero,
   },
   extends: AbstractPageScrollComponent,
   methods: {
