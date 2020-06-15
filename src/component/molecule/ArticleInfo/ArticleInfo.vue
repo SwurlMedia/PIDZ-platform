@@ -3,6 +3,8 @@
 
 <template>
   <div :class="[$style.articleInfo]">
-    <h2>ArticleInfo</h2>
+    <span>{{ author }}</span>
+    <span>{{ subject }}</span>
+    <span>{{ date }}</span>
   </div>
 </template>

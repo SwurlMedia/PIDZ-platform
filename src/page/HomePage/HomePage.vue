@@ -11,6 +11,9 @@
         title="Ridiculus Adipiscing Vulputate Mattis"
         image="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80"
         spotlight
+        author="Kees Bovenkamp"
+        subject="Huisarts"
+        date="2 Uur Geleden"
       >
         Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
       </Hero>

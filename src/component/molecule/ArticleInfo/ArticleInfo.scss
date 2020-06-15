@@ -1,3 +1,19 @@
 /* stylelint-disable-next-line block-no-empty */
 .article-info {
+  font-size: 1.75rem;
+  margin: -1rem 0 1rem;
+  color: #fff;
+  span {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    &:not(:last-child)::after {
+      content: '';
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: currentColor;
+      margin: 0 0.125rem 0 0.5rem;
+    }
+  }
 }

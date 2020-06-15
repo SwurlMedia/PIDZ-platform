@@ -12,7 +12,8 @@
     h1 {
       color: var(--color-white);
       font-weight: 400;
-      margin-top: 0;
+      margin: var(--spacing-s) 0;
+      line-height: 1em;
     }
 
     h2 {
@@ -25,7 +26,8 @@
     }
 
     p {
-      color: var(--color-white);
+      color: #d8d8d8;
+      max-width: 80ch;
     }
   }
 
