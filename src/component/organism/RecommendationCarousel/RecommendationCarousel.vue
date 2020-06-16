@@ -36,13 +36,13 @@
             >
               <router-link to="/">
                 <ArticleThumbnail
+                  :id="item.id"
                   :title="item.title"
                   :image="item.image"
                   :author="item.author"
                   :subject="item.subject"
                   :date="item.date"
                   :description="item.description"
-                  :id="item.id"
                 />
               </router-link>
             </li>
