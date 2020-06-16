@@ -14,6 +14,6 @@
     >
       Bereid de IC-capaciteit structureel uit en wijs per regio een ziekenhuis aan "die covid doet", zegt Ernst Kuipers, verantwoordelijk voor de verdeling van corona-zorg in Nederland.
     </Hero>
-    <RecommendationCarousel />
+    <RecommendationCarousel :items="carouselItems" />
   </div>
 </template>

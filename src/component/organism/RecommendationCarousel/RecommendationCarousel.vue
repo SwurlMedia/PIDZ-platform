@@ -29,39 +29,21 @@
       >
         <div ref="wrapper">
           <ul ref="carousel">
-            <li ref="carouselItem">
+            <li
+              v-for="item in items"
+              :key="item.id"
+              ref="carouselItem"
+            >
               <router-link to="/">
-                <ArticleThumbnail />
-              </router-link>
-            </li>
-            <li ref="carouselItem">
-              <router-link to="/">
-                <ArticleThumbnail />
-              </router-link>
-            </li>
-            <li ref="carouselItem">
-              <router-link to="/">
-                <ArticleThumbnail />
-              </router-link>
-            </li>
-            <li ref="carouselItem">
-              <router-link to="/">
-                <ArticleThumbnail />
-              </router-link>
-            </li>
-            <li ref="carouselItem">
-              <router-link to="/">
-                <ArticleThumbnail />
-              </router-link>
-            </li>
-            <li ref="carouselItem">
-              <router-link to="/">
-                <ArticleThumbnail />
-              </router-link>
-            </li>
-            <li ref="carouselItem">
-              <router-link to="/">
-                <ArticleThumbnail />
+                <ArticleThumbnail
+                  :title="item.title"
+                  :image="item.image"
+                  :author="item.author"
+                  :subject="item.subject"
+                  :date="item.date"
+                  :description="item.description"
+                  :id="item.id"
+                />
               </router-link>
             </li>
           </ul>

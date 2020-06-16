@@ -12,6 +12,12 @@ export default {
     ArticleThumbnail,
   },
   extends: AbstractScrollComponent,
+  props: {
+    items: {
+      type: Array,
+      required: true,
+    },
+  },
   data() {
     return {
       currentSlide: 1,
@@ -34,22 +40,22 @@ export default {
       const { carousel, carouselItem } = this.$refs;
 
       this.carousel = carousel;
-      this.carouselItem = carouselItem;
+      [this.carouselItem] = carouselItem;
 
       Draggable.create(carousel, {
         type: 'x',
         inertia: true,
         bounds: {
           minX: 0,
-          maxX: -carousel.scrollWidth + carouselItem.offsetWidth,
+          maxX: -carousel.scrollWidth + this.carouselItem.offsetWidth,
         },
         onThrowComplete: this.updateSlideNumber,
         snap(value) {
-          return Math.round(value / carouselItem.offsetWidth) * carouselItem.offsetWidth;
+          return Math.round(value / carouselItem[0].offsetWidth) * carouselItem[0].offsetWidth;
         },
       });
 
-      this.totalSlides = this.carousel.scrollWidth / carouselItem.offsetWidth;
+      this.totalSlides = this.carousel.scrollWidth / carouselItem[0].offsetWidth;
     },
     prev() {
       if (this.currentSlide > 1) {
