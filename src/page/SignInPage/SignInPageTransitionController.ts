@@ -2,7 +2,7 @@ import {
   AbstractTransitionController,
   IAbstractTransitionComponent,
 } from 'vue-transition-component';
-import { TimelineMax, Expo } from 'gsap';
+import gsap, { Expo } from 'gsap';
 
 export default class SignInPageTransitionController extends AbstractTransitionController {
   /**
@@ -10,30 +10,31 @@ export default class SignInPageTransitionController extends AbstractTransitionCo
    *
    * @protected
    * @method setupTransitionInTimeline
-   * @param {TimelineMax} timeline The transition in timeline
+   * @param {gsap.core.Timeline} timeline The transition in timeline
    * @param {IAbstractTransitionComponent} parent The reference to the parent controller
    * @param {string} id The transition id that was provided when constructing the controller
    */
   protected setupTransitionInTimeline(
-    timeline: TimelineMax,
+    timeline: gsap.core.Timeline,
     parent: IAbstractTransitionComponent,
     id: string,
   ): void {
     timeline
-      .from(parent.$el, 0.5, {
+      .from(parent.$el, {
+        duration: 0.5,
         autoAlpha: 0,
         clearProps: 'all',
       })
-      .staggerFrom(
+      .from(
         parent.$el.querySelectorAll('.stagger'),
-        1,
         {
+          duration: 1,
           autoAlpha: 0,
           y: 50,
           ease: Expo.easeOut,
           clearProps: 'all',
+          stagger: 0.1,
         },
-        0.1,
         '=-0.5',
       );
   }
@@ -43,12 +44,12 @@ export default class SignInPageTransitionController extends AbstractTransitionCo
    *
    * @protected
    * @method setupTransitionOutTimeline
-   * @param {TimelineMax} timeline The transition in timeline
+   * @param {gsap.core.Timeline} timeline The transition in timeline
    * @param {IAbstractTransitionComponent} parent The reference to the parent controller
    * @param {string} id The transition id that was provided when constructing the controller
    */
   protected setupTransitionOutTimeline(
-    timeline: TimelineMax,
+    timeline: gsap.core.Timeline,
     parent: IAbstractTransitionComponent,
     id: string,
   ): void {
@@ -63,12 +64,12 @@ export default class SignInPageTransitionController extends AbstractTransitionCo
    *
    * @protected
    * @method setupLoopingAnimationTimeline
-   * @param {TimelineMax} timeline The transition in timeline
+   * @param {gsap.core.Timeline} timeline The transition in timeline
    * @param {IAbstractTransitionComponent} parent The reference to the parent controller
    * @param {string} id The transition id that was provided when constructing the controller
    */
   protected setupLoopingAnimationTimeline(
-    timeline: TimelineMax,
+    timeline: gsap.core.Timeline,
     parent: IAbstractTransitionComponent,
     id: string,
   ): void {}

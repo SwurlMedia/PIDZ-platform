@@ -4,7 +4,7 @@ import {
 } from 'vue-transition-component';
 import gsap from 'gsap';
 
-export default class BtnSecondaryFlatTransitionController extends AbstractTransitionController {
+export default class RecommendationCarouselTransitionController extends AbstractTransitionController {
   /**
    * Use this method to setup your transition in timeline
    *

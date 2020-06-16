@@ -1,5 +1,5 @@
 {
-  "templatePath": "./build-tools/template,./node_modules/vue-transition-component/template",
+  "templatePath": "./build-tools/template",
   "destination": "./src/component",
   "templateExtensions": [
     ".sg"

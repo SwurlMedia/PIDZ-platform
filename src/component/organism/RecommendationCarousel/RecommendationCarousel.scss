@@ -1,0 +1,97 @@
+/* stylelint-disable-next-line block-no-empty */
+.recommendation-carousel {
+  main {
+    overflow: hidden;
+  }
+
+  button {
+    display: none;
+  }
+
+  .carousel-wrapper {
+    grid-column: 2 / 7;
+
+    ul {
+      display: flex;
+      list-style: none;
+      width: fit-content;
+
+      li {
+        padding-right: 2rem;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  @include respond-to(MEDIUM) {
+    header {
+      align-items: center;
+    }
+
+    h4 {
+      grid-column: 2 / 12;
+    }
+
+    button {
+      display: block;
+      padding: 0;
+      background: transparent;
+      width: 100%;
+      border: none;
+      height: fit-content;
+      cursor: pointer;
+      color: var(--color-text-primary);
+      transition: 0.3s ease-out;
+
+      span {
+        width: 100%;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:hover {
+        color: black;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+
+    .arrow-left {
+      grid-column: 12 / 13;
+    }
+
+    .arrow-right {
+      grid-column: 13 / 14;
+    }
+
+    .carousel-wrapper {
+      grid-column: 2 / 15;
+    }
+  }
+
+  @include respond-to(LARGE) {
+    h4 {
+      grid-column: 2 / 24;
+    }
+
+    .carousel-wrapper {
+      grid-column: 2 / 27;
+    }
+
+    .arrow-left {
+      grid-column: 24 / 25;
+    }
+
+    .arrow-right {
+      grid-column: 25 / 26;
+    }
+  }
+}

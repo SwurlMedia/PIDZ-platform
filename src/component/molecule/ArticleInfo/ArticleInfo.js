@@ -4,6 +4,7 @@ import ArticleInfoTransitionController from './ArticleInfoTransitionController';
 // @vue/component
 export default {
   name: 'ArticleInfo',
+  extends: AbstractScrollComponent,
   props: {
     author: {
       type: String,
@@ -18,7 +19,6 @@ export default {
       required: true,
     },
   },
-  extends: AbstractScrollComponent,
   methods: {
     handleAllComponentsReady() {
       this.transitionController = new ArticleInfoTransitionController(this);
