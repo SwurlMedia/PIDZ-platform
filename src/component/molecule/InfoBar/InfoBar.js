@@ -2,6 +2,7 @@ import { AbstractTransitionComponent } from 'vue-transition-component';
 import InfoBarTransitionController from './InfoBarTransitionController';
 import AvatarInfo from '../AvatarInfo';
 import HeartbeatButton from '../HeartbeatButton';
+import CategoryTag from '../../atom/CategoryTag';
 
 // @vue/component
 export default {
@@ -9,6 +10,7 @@ export default {
   components: {
     AvatarInfo,
     HeartbeatButton,
+    CategoryTag,
   },
   extends: AbstractTransitionComponent,
   props: {

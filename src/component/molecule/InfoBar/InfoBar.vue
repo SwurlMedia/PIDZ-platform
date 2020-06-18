@@ -14,6 +14,11 @@
         :location="location"
       />
       <HeartbeatButton />
+      <div :class="$style.wrapper">
+        <CategoryTag title="COVID-19" />
+        <CategoryTag title="Pandemie" />
+        <CategoryTag title="Vaccin" />
+      </div>
     </div>
   </div>
 </template>
