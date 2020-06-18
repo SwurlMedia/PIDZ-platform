@@ -17,6 +17,12 @@
         type="button"
         @click="handleCTAClick"
       >{{ ctaCopy }}</button>
+      <button
+        v-else-if="ctaIcon"
+        class="btn"
+        type="button"
+        @click="handleCTAClick"
+      ><Icon :name="ctaIcon" /></button>
     </span>
   </label>
 </template>

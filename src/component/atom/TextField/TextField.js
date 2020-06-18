@@ -26,6 +26,10 @@ export default {
       type: String,
       default: null,
     },
+    ctaIcon: {
+      type: String,
+      default: null,
+    },
   },
   methods: {
     handleAllComponentsReady() {
