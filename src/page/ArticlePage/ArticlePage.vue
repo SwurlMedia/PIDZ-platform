@@ -18,5 +18,21 @@
       profession="RIVM"
       location="Nijmegen"
     />
+    <main class="grid-container">
+      <article :class="$style.bodyStyle">
+        <h4>Huisartsen mogen preventief bloedverdunners voorschrijven aan patiënten met een verhoogd risico op trombose die besmet of vermoedelijk besmet zijn met het coronavirus.</h4>
+        <p>
+          Uit onderzoek onder coronapatiënten op Nederlandse ic's bleek dat veel van hen tromboseverschijnselen ontwikkelen, waardoor de kans op overlijden groter wordt. Momenteel krijgen coronapatiënten in het ziekenhuis daarom al bloedverdunners toegediend.<br><br>
+
+          Nu komen ook (vermoedelijke) bedlegerige coronapatiënten die niet in het ziekenhuis liggen voor de behandeling in aanmerking, staat in een nieuwe richtlijn. Het gaat om mensen die trombose hebben gehad of veel trombose in de familie hebben en om kankerpatiënten, bij elkaar opgeteld zo'n 150.000 tot 200.000 mensen per jaar.<br><br>
+
+          De huisarts zal per patiënt beoordelen of het toedienen van de bloedverdunners echt noodzakelijk is, omdat het ook kan leiden tot negatieve bijwerkingen, zoals bloedingen. De bloedverdunners zullen vervolgens worden toegediend via een injectie. Het gaat niet om het type bloedverdunners dat hart- en vaatziektepatiënten krijgen.<br><br>
+
+          Het doel van deze preventieve behandeling is het voorkomen van trombosecomplicaties bij patiënten. Mogelijk leidt de behandeling daardoor ook tot minder ziekenhuisopnames.<br><br>
+
+          Momenteel loopt in Nederland een breed onderzoek naar het verband tussen het coronavirus, trombose en longembolieën. Bij een trombose raakt een bloedvat verstopt door een bloedstolsel. Als dit stolsel losschiet en in de longen belandt, heet dat een longembolie.<br><br>
+        </p>
+      </article>
+    </main>
   </div>
 </template>

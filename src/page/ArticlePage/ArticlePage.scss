@@ -1,3 +1,16 @@
 /* stylelint-disable-next-line block-no-empty */
 .article-page {
+  .bodyStyle {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h4 {
+      max-width: 40ch;
+      font-weight: 400;
+    }
+    p {
+      max-width: 80ch;
+    }
+  }
 }
