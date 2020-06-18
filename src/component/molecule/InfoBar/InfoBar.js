@@ -1,12 +1,14 @@
 import { AbstractTransitionComponent } from 'vue-transition-component';
 import InfoBarTransitionController from './InfoBarTransitionController';
 import AvatarInfo from '../AvatarInfo';
+import HeartbeatButton from '../HeartbeatButton';
 
 // @vue/component
 export default {
   name: 'InfoBar',
   components: {
     AvatarInfo,
+    HeartbeatButton,
   },
   extends: AbstractTransitionComponent,
   props: {

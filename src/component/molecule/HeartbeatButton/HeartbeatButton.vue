@@ -3,6 +3,14 @@
 
 <template>
   <div :class="[$style.heartbeatButton]">
-    <h2>HeartbeatButton</h2>
+    <main>
+      <Icon
+        :class="[$style.Icon]"
+        name="heartbeat-light"
+      />
+    </main>
+    <aside>
+      <h6>0</h6>
+    </aside>
   </div>
 </template>

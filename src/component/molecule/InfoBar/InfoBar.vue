@@ -12,5 +12,6 @@
       :profession="profession"
       :location="location"
     />
+    <HeartbeatButton />
   </div>
 </template>
