@@ -12,7 +12,11 @@
         In de Spotlight
       </h2>
       <h1>{{ title }}</h1>
-      <ArticleInfo :author="author" :subject="subject" :date="date" />
+      <ArticleInfo
+        :author="author"
+        :subject="subject"
+        :date="date"
+      />
       <p>
         <slot />
       </p>
