@@ -12,6 +12,11 @@
       subject="Covid-19"
       date="Vrijdag 22 mei"
     />
-    <InfoBar />
+    <InfoBar
+      image="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
+      name="Jantien Maassen"
+      profession="RIVM"
+      location="Nijmegen"
+    />
   </div>
 </template>

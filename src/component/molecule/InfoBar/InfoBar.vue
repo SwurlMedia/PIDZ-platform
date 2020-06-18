@@ -6,6 +6,11 @@
     :class="[$style.infoBar]"
     class="grid-container"
   >
-    <h2>InfoBar</h2>
+    <AvatarInfo
+      :image="image"
+      :name="name"
+      :profession="profession"
+      :location="location"
+    />
   </div>
 </template>

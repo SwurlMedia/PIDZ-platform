@@ -3,6 +3,16 @@
 
 <template>
   <div :class="[$style.avatarInfo]">
-    <h2>AvatarInfo</h2>
+    <main>
+      <img
+        :src="image"
+        alt="ProfilePicture"
+      >
+    </main>
+    <aside>
+      <h6>{{ name }}</h6>
+      <p>{{ profession }}</p>
+      <p>{{ location }}</p>
+    </aside>
   </div>
 </template>
