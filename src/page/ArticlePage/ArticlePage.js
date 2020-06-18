@@ -1,9 +1,15 @@
 import { AbstractPageScrollComponent, getEventBus, ADD_COMPONENTS } from 'vue-transition-component';
 import ArticlePageTransitionController from './ArticlePageTransitionController';
+import Hero from '../../component/organism/Hero';
+import InfoBar from '../../component/molecule/InfoBar';
 
 // @vue/component
 export default {
   name: 'ArticlePage',
+  components: {
+    Hero,
+    InfoBar,
+  },
   extends: AbstractPageScrollComponent,
   methods: {
     handleAllComponentsReady() {
