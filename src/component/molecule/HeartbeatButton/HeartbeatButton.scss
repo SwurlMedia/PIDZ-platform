@@ -1,8 +1,17 @@
 /* stylelint-disable-next-line block-no-empty */
 .heartbeat-button {
+  display: flex;
+  align-items: center;
   main {
-    .icon {
-      width: 10rem;
+    .Icon {
+      width: 5rem;
+      margin-right: 2rem;
+      color: red;
+      display: block;
     }
+  }
+
+  * {
+    user-select: none;
   }
 }

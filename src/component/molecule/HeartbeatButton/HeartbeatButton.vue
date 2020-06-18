@@ -3,14 +3,14 @@
 
 <template>
   <div :class="[$style.heartbeatButton]">
-    <main>
+    <main @click="incrementLike">
       <Icon
         :class="[$style.Icon]"
         name="heartbeat-light"
       />
     </main>
     <aside>
-      <h6>0</h6>
+      <h5> {{ counter }} </h5>
     </aside>
   </div>
 </template>

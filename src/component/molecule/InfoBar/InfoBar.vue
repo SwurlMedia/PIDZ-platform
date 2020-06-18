@@ -6,12 +6,14 @@
     :class="[$style.infoBar]"
     class="grid-container"
   >
-    <AvatarInfo
-      :image="image"
-      :name="name"
-      :profession="profession"
-      :location="location"
-    />
-    <HeartbeatButton />
+    <div :class="$style.wrapper">
+      <AvatarInfo
+        :image="image"
+        :name="name"
+        :profession="profession"
+        :location="location"
+      />
+      <HeartbeatButton />
+    </div>
   </div>
 </template>
