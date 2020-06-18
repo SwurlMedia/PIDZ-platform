@@ -9,6 +9,12 @@
   main {
     z-index: 1;
 
+    .logo {
+      width: 22rem;
+      color: white;
+      opacity: 0.6;
+    }
+
     h1 {
       color: var(--color-white);
       font-weight: 400;
@@ -22,7 +28,8 @@
       font-size: 3rem;
       font-weight: 700;
       letter-spacing: 2.5px;
-      color: #d8d8d8;
+      color: white;
+      opacity: 0.6;
       line-height: 1em;
     }
 
