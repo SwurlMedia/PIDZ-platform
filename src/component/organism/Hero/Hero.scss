@@ -14,6 +14,7 @@
       font-weight: 400;
       margin: var(--spacing-s) 0;
       line-height: 1em;
+      font-size: 5rem;
     }
 
     h2 {
@@ -37,5 +38,11 @@
     height: 100%;
     background: linear-gradient(90deg, rgba(#000, 0.6), rgba(#000, 0));
     position: absolute;
+  }
+
+  @include respond-to(LARGE) {
+    main h1 {
+      font-size: 8.5rem;
+    }
   }
 }
