@@ -8,6 +8,10 @@
     :style="{backgroundImage: `url('${ image }')`}"
   >
     <main>
+      <Icon
+        name="wijPidz"
+        :class="$style.logo"
+      />
       <h2 v-if="spotlight">
         In de Spotlight
       </h2>
