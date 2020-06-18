@@ -1,3 +1,21 @@
 /* stylelint-disable-next-line block-no-empty */
 .home-page {
+  margin-bottom: 10rem;
+
+  @include respond-to(LARGE) {
+    .overview-container {
+      .recent-articles {
+        grid-column: 2 / 20;
+      }
+
+      .misc {
+        grid-column: 20 / 26;
+
+        h5 {
+          position: sticky;
+          top: 2rem;
+        }
+      }
+    }
+  }
 }
