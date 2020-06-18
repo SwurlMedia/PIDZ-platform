@@ -2,6 +2,7 @@ import { AbstractPageScrollComponent, getEventBus, ADD_COMPONENTS } from 'vue-tr
 import HomePageTransitionController from './HomePageTransitionController';
 import Hero from '../../component/organism/Hero';
 import RecommendationCarousel from '../../component/organism/RecommendationCarousel';
+import RecentArticlesOverview from '../../component/organism/RecentArticlesOverview';
 
 // @vue/component
 export default {
@@ -9,6 +10,7 @@ export default {
   components: {
     RecommendationCarousel,
     Hero,
+    RecentArticlesOverview,
   },
   extends: AbstractPageScrollComponent,
   data() {
