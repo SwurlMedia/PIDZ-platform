@@ -5,21 +5,24 @@
   <div :class="[$style.homePage]">
     <Hero
       :cta="{to:'/', label:'Lees meer'}"
-      title="Het coronavirus is niet weg, de curve helemaal platslaan is een illusie."
-      image="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80"
+      :title="data.spotlight.title"
+      :image="data.spotlight.image"
       spotlight
-      author="Jantien Maassen"
-      subject="Covid-19"
-      date="Vrijdag 22 mei"
+      :author="data.spotlight.author"
+      :subject="data.spotlight.subject"
+      :date="data.spotlight.date"
     >
-      Bereid de IC-capaciteit structureel uit en wijs per regio een ziekenhuis aan "die covid doet", zegt Ernst Kuipers, verantwoordelijk voor de verdeling van corona-zorg in Nederland.
+      {{ data.spotlight.description }}
     </Hero>
-    <RecommendationCarousel :items="carouselItems" />
+    <RecommendationCarousel :items="data.recommendations" />
     <div
       :class="$style.overviewContainer"
       class="grid-container"
     >
-      <RecentArticlesOverview :class="$style.recentArticles" />
+      <RecentArticlesOverview
+        :class="$style.recentArticles"
+        :items="data.recents"
+      />
       <div :class="$style.misc">
         <h5>Misc goes here</h5>
       </div>
