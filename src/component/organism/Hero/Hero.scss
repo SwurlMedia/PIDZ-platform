@@ -10,11 +10,18 @@
   main {
     z-index: 1;
 
+    .logo {
+      width: 22rem;
+      color: white;
+      opacity: 0.6;
+    }
+
     h1 {
       color: var(--color-white);
       font-weight: 400;
       margin: var(--spacing-s) 0;
       line-height: 1em;
+      font-size: 5rem;
     }
 
     h2 {
@@ -22,7 +29,8 @@
       font-size: 3rem;
       font-weight: 700;
       letter-spacing: 2.5px;
-      color: #d8d8d8;
+      color: white;
+      opacity: 0.6;
       line-height: 1em;
     }
 
@@ -38,5 +46,11 @@
     height: 100%;
     background: linear-gradient(90deg, rgba(#000, 0.6), rgba(#000, 0));
     position: absolute;
+  }
+
+  @include respond-to(LARGE) {
+    main h1 {
+      font-size: 8.5rem;
+    }
   }
 }

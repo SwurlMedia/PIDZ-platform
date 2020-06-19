@@ -1,0 +1,18 @@
+/* stylelint-disable-next-line block-no-empty */
+.recent-articles-overview {
+  .article-list {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  @include respond-to(MEDIUM) {
+    .article-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 2rem;
+    }
+  }
+}

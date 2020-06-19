@@ -2,7 +2,7 @@ import {
   AbstractTransitionController,
   IAbstractTransitionComponent,
 } from 'vue-transition-component';
-import { TimelineMax } from 'gsap';
+import gsap from 'gsap';
 
 export default class ProfileImgSelectorTransitionController extends AbstractTransitionController {
   /**
@@ -10,12 +10,12 @@ export default class ProfileImgSelectorTransitionController extends AbstractTran
    *
    * @protected
    * @method setupTransitionInTimeline
-   * @param {TimelineLite | TimelineMax} timeline The transition in timeline
+   * @param {gsap.core.Timeline} timeline The transition in timeline
    * @param {IAbstractTransitionComponent} parent The reference to the parent controller
    * @param {string} id The transition id that was provided when constructing the controller
    */
   protected setupTransitionInTimeline(
-    timeline: TimelineMax,
+    timeline: gsap.core.Timeline,
     parent: IAbstractTransitionComponent,
     id: string,
   ): void {}
@@ -25,12 +25,12 @@ export default class ProfileImgSelectorTransitionController extends AbstractTran
    *
    * @protected
    * @method setupTransitionOutTimeline
-   * @param {TimelineLite | TimelineMax} timeline The transition in timeline
+   * @param {gsap.core.Timeline} timeline The transition in timeline
    * @param {IAbstractTransitionComponent} parent The reference to the parent controller
    * @param {string} id The transition id that was provided when constructing the controller
    */
   protected setupTransitionOutTimeline(
-    timeline: TimelineMax,
+    timeline: gsap.core.Timeline,
     parent: IAbstractTransitionComponent,
     id: string,
   ): void {}
@@ -40,12 +40,12 @@ export default class ProfileImgSelectorTransitionController extends AbstractTran
    *
    * @protected
    * @method setupLoopingAnimationTimeline
-   * @param {TimelineLite | TimelineMax} timeline The transition in timeline
+   * @param {gsap.core.Timeline} timeline The transition in timeline
    * @param {IAbstractTransitionComponent} parent The reference to the parent controller
    * @param {string} id The transition id that was provided when constructing the controller
    */
   protected setupLoopingAnimationTimeline(
-    timeline: TimelineMax,
+    timeline: gsap.core.Timeline,
     parent: IAbstractTransitionComponent,
     id: string,
   ): void {}
