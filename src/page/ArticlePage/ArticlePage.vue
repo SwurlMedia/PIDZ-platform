@@ -33,6 +33,12 @@
           Momenteel loopt in Nederland een breed onderzoek naar het verband tussen het coronavirus, trombose en longembolieën. Bij een trombose raakt een bloedvat verstopt door een bloedstolsel. Als dit stolsel losschiet en in de longen belandt, heet dat een longembolie.<br><br>
         </p>
       </article>
+      <h5>Bron</h5>
+      <a
+        href="#"
+        target="blank"
+      >https://nos.nl/artikel/2335226-energie-investeringen-naar-historisch-dieptepunt-door-coronacrisis.html</a>
     </main>
+    <RecommendationCarousel :items="carouselItems" />
   </div>
 </template>
