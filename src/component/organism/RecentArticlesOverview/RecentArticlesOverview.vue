@@ -6,7 +6,7 @@
     <h4>Recente Artikelen</h4>
     <ul :class="$style.articleList">
       <li
-        v-for="item in articles"
+        v-for="item in items"
         :key="item.id"
         ref="carouselItem"
       >
