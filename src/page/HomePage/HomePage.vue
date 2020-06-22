@@ -24,7 +24,7 @@
         :items="data.recents"
       />
       <div :class="$style.misc">
-        <h5>Misc goes here</h5>
+        <MiscBlock />
       </div>
     </div>
   </div>

@@ -3,6 +3,7 @@ import HomePageTransitionController from './HomePageTransitionController';
 import Hero from '../../component/organism/Hero';
 import RecommendationCarousel from '../../component/organism/RecommendationCarousel';
 import RecentArticlesOverview from '../../component/organism/RecentArticlesOverview';
+import MiscBlock from '../../component/organism/MiscBlock';
 import dummy from '../../data/dummy.json';
 
 // @vue/component
@@ -12,6 +13,7 @@ export default {
     RecommendationCarousel,
     Hero,
     RecentArticlesOverview,
+    MiscBlock,
   },
   extends: AbstractPageScrollComponent,
   data() {
