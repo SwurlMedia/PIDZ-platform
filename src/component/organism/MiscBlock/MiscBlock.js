@@ -1,9 +1,13 @@
 import { AbstractScrollComponent } from 'vue-transition-component';
 import MiscBlockTransitionController from './MiscBlockTransitionController';
+import BtnLightFlat from '../../atom/BtnLightFlat';
 
 // @vue/component
 export default {
   name: 'MiscBlock',
+  components: {
+    BtnLightFlat,
+  },
   extends: AbstractScrollComponent,
   data() {
     return {

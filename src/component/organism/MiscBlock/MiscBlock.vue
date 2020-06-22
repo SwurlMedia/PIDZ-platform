@@ -24,5 +24,6 @@
         {{ tag }}
       </li>
     </ul>
+    <BtnLightFlat :class="$style.btn">Plaats een artikel</BtnLightFlat>
   </aside>
 </template>
