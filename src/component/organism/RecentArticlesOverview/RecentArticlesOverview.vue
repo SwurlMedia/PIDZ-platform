@@ -7,12 +7,12 @@
     <ul :class="$style.articleList">
       <li
         v-for="item in items"
-        :key="item.id"
+        :key="item.title + item.date"
         ref="carouselItem"
       >
         <router-link to="/">
           <ArticleThumbnail
-            :id="item.id"
+            :id="item.articleId"
             :title="item.title"
             :image="item.image"
             :author="item.author"

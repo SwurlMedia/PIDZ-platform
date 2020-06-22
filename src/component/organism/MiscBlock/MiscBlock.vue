@@ -9,5 +9,20 @@
       placeholder="Zoekterm"
       cta-icon="search"
     />
+    <ul :class="[$style.tagList]">
+      <li
+        v-for="(tag, index) in tags"
+        :key="`misc-block-tag-list-${tag}-${index}`"
+        ref="tags"
+        :class="[
+          {
+            [$style.active]: activeTags.includes(index)
+          }
+        ]"
+        @click="toggleTag(index)"
+      >
+        {{ tag }}
+      </li>
+    </ul>
   </aside>
 </template>
