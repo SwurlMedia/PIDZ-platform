@@ -29,6 +29,6 @@ export default [
   {
     path: '/artikel',
     component: ArticlePage,
-    name: RouteNames.artilepage,
+    name: RouteNames.ARTICLEPAGE,
   },
 ];

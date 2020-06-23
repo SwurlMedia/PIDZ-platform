@@ -10,7 +10,7 @@
         :key="item.title + item.date"
         ref="carouselItem"
       >
-        <router-link to="/">
+        <router-link :to="{ name: RouteNames.ARTICLEPAGE }">
           <ArticleThumbnail
             :id="item.articleId"
             :title="item.title"
