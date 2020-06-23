@@ -18,6 +18,7 @@ export default {
       type: String,
       required: true,
     },
+    verified: Boolean,
   },
   methods: {
     handleAllComponentsReady() {

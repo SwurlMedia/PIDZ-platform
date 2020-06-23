@@ -6,7 +6,8 @@
     "date": "19 juni 2020",
     "description": "Willen we genoeg handen in de zorg hebben, dan moet het kabinet nu ingrijpen. Het belang van voldoende zorgpersoneel blijkt des te meer nu we midden in de coronacrisis zitten, concludeert de Sociaal Economische Raad (SER) in een rapport over de zorg van de toekomst.",
     "subject": "Zorg",
-    "image": "https://nos.nl/data/image/2020/01/09/620111/3200x1800a.jpg"
+    "image": "https://nos.nl/data/image/2020/01/09/620111/3200x1800a.jpg",
+    "verified": true
   },
   "recommendations": [
     {
@@ -16,7 +17,8 @@
       "date": "22 mei 2020",
       "description": "Bereid de IC-capaciteit structureel uit en wijs per regio een ziekenhuis aan die covid doet, zegt Ernst Kuipers, verantwoordelijk voor de verdeling van corona-zorg in Nederland.",
       "subject": "COVID-19",
-      "image": "https://nos.nl/data/image/2020/05/22/651318/320x180.jpg"
+      "image": "https://nos.nl/data/image/2020/05/22/651318/320x180.jpg",
+      "verified": true
     },
     {
       "articleId": "",
@@ -34,7 +36,8 @@
       "date": "19 juni 2020",
       "description": "De coronaspoedwet zal niet per 1 juli in werking treden, schrijft het kabinet in een vrijdag verzonden brief aan de Kamer. De wetsbehandeling van de noodwet heeft meer tijd nodig.",
       "subject": "COVID-19",
-      "image": "https://media.nu.nl/m/3yexk66awjk2_wd640.jpg/kabinet-stelt-invoering-coronaspoedwet-uit.jpg"
+      "image": "https://media.nu.nl/m/3yexk66awjk2_wd640.jpg/kabinet-stelt-invoering-coronaspoedwet-uit.jpg",
+      "verified": true
     },
     {
       "articleId": "",
@@ -52,7 +55,8 @@
       "date": "16 Juni 2020",
       "description": "Nederlanders maken zich minder zorgen over nepnieuws op het internet dan in veel andere landen.",
       "subject": "Internet",
-      "image": "https://media.nu.nl/m/undx2moa3scf_wd640.jpg/nederlanders-maken-zich-relatief-weinig-zorgen-over-nepnieuws-online.jpg"
+      "image": "https://media.nu.nl/m/undx2moa3scf_wd640.jpg/nederlanders-maken-zich-relatief-weinig-zorgen-over-nepnieuws-online.jpg",
+      "verified": true
     },
     {
       "articleId": "",
@@ -81,7 +85,8 @@
       "date": "19 Juni 2020",
       "description": "Het aantal mensen bij wie onterecht het coronavirus is vastgesteld in een laboratorium in Dordrecht, blijkt hoger te liggen dan vanochtend bekend werd. Het gaat niet om vijftien mensen, maar om dertig",
       "subject": "COVID-19",
-      "image": "https://www.stz.nl/image/picture/dd1c90290ad938a491c4788e600f0e831461_1000x500.jpg"
+      "image": "https://www.stz.nl/image/picture/dd1c90290ad938a491c4788e600f0e831461_1000x500.jpg",
+      "verified": true
     },
     {
       "articleId": "",
@@ -90,7 +95,8 @@
       "date": "19 Juni 2020",
       "description": "De coronapandemie heeft ertoe geleid dat online seksueel misbruik en uitbuiting van kinderen fors is toegenomen, concludeert Europol in een nieuw rapport.",
       "subject": "Binnenland",
-      "image": "https://nos.nl/data/image/2020/06/19/656798/3200x1800a.jpg"
+      "image": "https://nos.nl/data/image/2020/06/19/656798/3200x1800a.jpg",
+      "verified": true
     },
     {
       "articleId": "",
@@ -126,7 +132,8 @@
       "date": "23 maart 2020",
       "description": "De zorgverzekeraars zijn niet meer bereid om de ziekenhuizen volledig te compenseren voor de gemiste omzet tijdens de coronacrisis. ",
       "subject": "COVID-19",
-      "image": "https://www.zorgvisie.nl/content/uploads/sites/2/2020/06/Onderhandelen-218x150.jpg"
+      "image": "https://www.zorgvisie.nl/content/uploads/sites/2/2020/06/Onderhandelen-218x150.jpg",
+      "verified": true
     },
     {
       "articleId": "",

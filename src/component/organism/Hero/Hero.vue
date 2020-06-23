@@ -20,6 +20,7 @@
         :author="author"
         :subject="subject"
         :date="date"
+        verified
       />
       <p>
         <slot />

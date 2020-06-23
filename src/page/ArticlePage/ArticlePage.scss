@@ -1,5 +1,7 @@
 /* stylelint-disable-next-line block-no-empty */
 .article-page {
+  padding-bottom: var(--spacing-l);
+
   .back-link {
     position: absolute;
     z-index: 10;

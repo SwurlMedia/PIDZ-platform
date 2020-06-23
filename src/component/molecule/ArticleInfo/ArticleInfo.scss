@@ -3,17 +3,54 @@
   font-size: 1.75rem;
   margin: -1rem 0 1rem;
   color: #fff;
-  span {
+  display: flex;
+  align-items: center;
+
+  > span {
     display: inline-flex;
     align-items: center;
     margin: 0;
-    &:not(:last-child)::after {
+
+    &:not(:last-of-type)::after {
       content: '';
       width: 0.5rem;
       height: 0.5rem;
       border-radius: 50%;
       background: currentColor;
       margin: 0 0.125rem 0 0.5rem;
+    }
+  }
+
+  .verified {
+    display: inline-flex;
+    position: relative;
+    margin-left: 1rem;
+    align-items: center;
+
+    span {
+      width: 1em;
+    }
+
+    .label {
+      position: absolute;
+      left: 3.5rem;
+      opacity: 0;
+      transition: 0.2s ease-out;
+      white-space: nowrap;
+      pointer-events: none;
+      padding: 0.5rem;
+      background: #0008;
+      width: fit-content;
+      color: var(--color-white);
+      backdrop-filter: blur(2rem);
+      border-radius: 0.25rem;
+    }
+
+    &:hover {
+      .label {
+        opacity: 1;
+        pointer-events: all;
+      }
     }
   }
 }

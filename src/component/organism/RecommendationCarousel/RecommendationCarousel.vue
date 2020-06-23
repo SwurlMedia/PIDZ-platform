@@ -43,6 +43,7 @@
                   :subject="item.subject"
                   :date="item.date"
                   :description="item.description"
+                  :verified="item.verified"
                 />
               </router-link>
             </li>

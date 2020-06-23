@@ -13,6 +13,7 @@
       :author="author"
       :subject="subject"
       :date="date"
+      :verified="verified"
     />
     <p>
       {{ description }}
