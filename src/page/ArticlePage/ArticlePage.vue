@@ -5,6 +5,9 @@
   <div
     :class="[$style.articlePage]"
   >
+    <router-link :class="[$style.backLink]" :to="{ name: RouteNames.HOME }">
+      <Icon name="arrow-left-light" />Terug naar overzicht
+    </router-link>
     <Hero
       title="Het coronavirus is niet weg, de curve helemaal platslaan is een illusie."
       image="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80"
@@ -39,6 +42,6 @@
         target="blank"
       >https://nos.nl/artikel/2335226-energie-investeringen-naar-historisch-dieptepunt-door-coronacrisis.html</a>
     </main>
-    <RecommendationCarousel :items="carouselItems" />
+    <RecommendationCarousel :items="data.recommendations" />
   </div>
 </template>

@@ -1,5 +1,26 @@
 /* stylelint-disable-next-line block-no-empty */
 .article-page {
+  .back-link {
+    position: absolute;
+    z-index: 10;
+    border: none;
+    padding-bottom: 0;
+    color: var(--color-white);
+    top: 3rem;
+    left: 3rem;
+    opacity: 0.5;
+    transition: 0.2s ease-out;
+
+    span {
+      width: 1em;
+      margin-right: 1rem;
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
   .bodyStyle {
     display: flex;
     align-items: center;

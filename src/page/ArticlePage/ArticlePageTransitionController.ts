@@ -2,7 +2,7 @@ import {
   AbstractTransitionController,
   IAbstractTransitionComponent,
 } from 'vue-transition-component';
-import { TimelineMax } from 'gsap';
+import { Expo, TimelineMax } from 'gsap';
 
 export default class ArticlePageTransitionController extends AbstractTransitionController {
   /**
@@ -18,7 +18,12 @@ export default class ArticlePageTransitionController extends AbstractTransitionC
     timeline: TimelineMax,
     parent: IAbstractTransitionComponent,
     id: string,
-  ): void {}
+  ): void {
+    timeline.from(parent.$el, 1, {
+      autoAlpha: 0,
+      ease: Expo.easeOut,
+    });
+  }
 
   /**
    * Use this method to setup your transition out timeline
@@ -33,7 +38,12 @@ export default class ArticlePageTransitionController extends AbstractTransitionC
     timeline: TimelineMax,
     parent: IAbstractTransitionComponent,
     id: string,
-  ): void {}
+  ): void {
+    timeline.to(parent.$el, 1, {
+      autoAlpha: 0,
+      ease: Expo.easeOut,
+    });
+  }
 
   /**
    * Use this method to setup your looping timeline

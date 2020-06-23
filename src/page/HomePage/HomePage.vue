@@ -4,7 +4,7 @@
 <template>
   <div :class="[$style.homePage]">
     <Hero
-      :cta="{to:'/', label:'Lees meer'}"
+      :cta="{to: { name: RouteNames.ARTICLEPAGE }, label:'Lees meer'}"
       :title="data.spotlight.title"
       :image="data.spotlight.image"
       spotlight

@@ -2,7 +2,7 @@ import {
   AbstractTransitionController,
   IAbstractTransitionComponent,
 } from 'vue-transition-component';
-import gsap from 'gsap';
+import gsap, { Expo } from 'gsap';
 
 export default class HomePageTransitionController extends AbstractTransitionController {
   /**
@@ -18,7 +18,12 @@ export default class HomePageTransitionController extends AbstractTransitionCont
     timeline: gsap.core.Timeline,
     parent: IAbstractTransitionComponent,
     id: string,
-  ): void {}
+  ): void {
+    timeline.from(parent.$el, 1, {
+      autoAlpha: 0,
+      ease: Expo.easeOut,
+    });
+  }
 
   /**
    * Use this method to setup your transition out timeline
@@ -33,7 +38,12 @@ export default class HomePageTransitionController extends AbstractTransitionCont
     timeline: gsap.core.Timeline,
     parent: IAbstractTransitionComponent,
     id: string,
-  ): void {}
+  ): void {
+    timeline.to(parent.$el, 1, {
+      autoAlpha: 0,
+      ease: Expo.easeOut,
+    });
+  }
 
   /**
    * Use this method to setup your looping timeline
