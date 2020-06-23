@@ -33,6 +33,7 @@ export default {
       type: String,
       required: true,
     },
+    verified: Boolean,
     cta: {
       type: Object,
       default: () => {
