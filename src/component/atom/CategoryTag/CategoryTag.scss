@@ -2,12 +2,12 @@
 .category-tag {
   display: flex;
   align-items: center;
+
   span {
     border: 3px solid currentColor;
     padding: 1rem 2rem;
     font-size: 2rem;
     border-radius: 0.5rem;
-    margin-left: 2.5rem;
   }
 
   &:nth-child(1) {
