@@ -2,8 +2,10 @@
 .heartbeat-button {
   display: flex;
   align-items: center;
+
   main {
     .Icon {
+      cursor: pointer;
       width: 5rem;
       margin-right: 2rem;
       color: var(--color-red-secondary);
