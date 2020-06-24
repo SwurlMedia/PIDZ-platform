@@ -15,9 +15,9 @@
       />
       <HeartbeatButton />
       <div :class="$style.wrapper">
-        <CategoryTag title="COVID-19" />
-        <CategoryTag title="Pandemie" />
-        <CategoryTag title="Vaccin" />
+        <CategoryTag :class="$style.tag" title="COVID-19" />
+        <CategoryTag :class="$style.tag" title="Pandemie" />
+        <CategoryTag :class="$style.tag" title="Vaccin" />
       </div>
     </div>
   </div>
