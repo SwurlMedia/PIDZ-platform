@@ -27,22 +27,28 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    border-bottom: 2px solid var(--color-blue-light);
+    padding-bottom: var(--spacing-m);
 
-    h4 {
-      max-width: 40ch;
-      font-weight: 400;
-    }
-
-    p {
+    .article-wrapper {
       max-width: 80ch;
+      font-size: 2rem;
+
+      h4 {
+        font-weight: 400;
+        font-size: 4rem;
+      }
+
+      p {
+        margin: 3rem 0;
+      }
     }
   }
 
   a {
-    border-bottom: 2px solid var(--color-blue-light);
     color: var(--color-blue-primary);
     transition: 0.3s;
-    padding-bottom: var(--spacing-m);
+
     &:hover {
       opacity: 0.5;
     }
